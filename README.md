@@ -1,3 +1,6 @@
+# Problem
+Please implement a time series classification method on Heartbeat dataset　(https://www.timeseriesclassification.com/description.php?Dataset=Heartbeat) using TimesNet and Crossformer implemented in the time series library (https://github.com/thuml/Time-Series-Library). So, you will have two results, one by TimesNet and the other by Crossformer.
+
 # Time Series Library (TSLib)
 TSLib is an open-source library for deep learning researchers, especially for deep time series analysis.
 
