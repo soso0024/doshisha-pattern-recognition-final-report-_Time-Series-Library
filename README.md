@@ -24,7 +24,7 @@ uv run python -u run.py \
   ```
 
 - Training command for Crossformer
-  ~- change the model parameter to `--model Crossformer`~
+  - ~change the model parameter to `--model Crossformer`~
 
 ```bash
 uv run python -u run.py \
