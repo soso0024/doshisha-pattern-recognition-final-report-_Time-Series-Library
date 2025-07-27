@@ -1,6 +1,31 @@
 # Problem
 Please implement a time series classification method on Heartbeat dataset　(https://www.timeseriesclassification.com/description.php?Dataset=Heartbeat) using TimesNet and Crossformer implemented in the time series library (https://github.com/thuml/Time-Series-Library). So, you will have two results, one by TimesNet and the other by Crossformer.
 
+## Commands
+- for TimesNet
+```bash
+uv run python -u run.py \
+  --task_name classification \
+  --is_training 1 \
+  --root_path ./dataset/Heartbeat/ \
+  --model_id Heartbeat \
+  --model TimesNet \
+  --data UEA \
+  --e_layers 2 \
+  --d_model 32 \
+  --d_ff 32 \
+  --top_k 3 \
+  --des 'Exp' \
+  --itr 1 \
+  --batch_size 16 \
+  --train_epochs 3 \
+  --gpu_type mps \
+  --num_workers 0
+  ```
+
+- for Crossformer
+  - change here to `--model Crossformer`
+
 # Time Series Library (TSLib)
 TSLib is an open-source library for deep learning researchers, especially for deep time series analysis.
 
@@ -174,25 +199,3 @@ All the experiment datasets are public, and we obtain them from the following li
 <a href="https://github.com/thuml/Time-Series-Library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=thuml/Time-Series-Library" />
 </a>
-
-## Memo
-- Training command for TimesNet
-```bash
-uv run python -u run.py \
-  --task_name classification \
-  --is_training 1 \
-  --root_path ./dataset/Heartbeat/ \
-  --model_id Heartbeat \
-  --model TimesNet \
-  --data UEA \
-  --e_layers 2 \
-  --d_model 32 \
-  --d_ff 32 \
-  --top_k 3 \
-  --des 'Exp' \
-  --itr 1 \
-  --batch_size 16 \
-  --train_epochs 3 \
-  --gpu_type mps \
-  --num_workers 0
-  ```
