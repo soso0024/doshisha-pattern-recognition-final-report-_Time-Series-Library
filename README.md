@@ -24,10 +24,66 @@ uv run python -u run.py \
   ```
 
 - Training command for Crossformer
-  - change the model parameter to `--model Crossformer`
+  ~- change the model parameter to `--model Crossformer`~
 
-- Test command for both models
+```bash
+uv run python -u run.py \
+  --task_name classification \
+  --is_training 1 \
+  --root_path ./dataset/Heartbeat/ \
+  --model_id Heartbeat \
+  --model Crossformer \
+  --data UEA \
+  --e_layers 2 \
+  --d_model 256 \
+  --d_ff 256 \
+  --des 'Exp' \
+  --itr 1 \
+  --batch_size 16 \
+  --train_epochs 30 \
+  --gpu_type mps \
+  --num_workers 0
+```
+
+- Test command for TimesNet
   - change the training parameter to `--is_training 0`
+
+```bash
+uv run python -u run.py \
+  --task_name classification \
+  --is_training 0 \
+  --root_path ./dataset/Heartbeat/ \
+  --model_id Heartbeat \
+  --model TimesNet \
+  --data UEA \
+  --e_layers 2 \
+  --d_model 32 \
+  --d_ff 32 \
+  --top_k 3 \
+  --des 'Exp' \
+  --itr 1 \
+  --gpu_type mps \
+  --num_workers 0
+```
+
+- Test command for Crossformer
+```bash
+uv run python -u run.py \
+  --task_name classification \
+  --is_training 0 \
+  --root_path ./dataset/Heartbeat/ \
+  --model_id Heartbeat \
+  --model Crossformer \
+  --data UEA \
+  --e_layers 2 \
+  --d_model 256 \
+  --d_ff 256 \
+  --des 'Exp' \
+  --itr 1 \
+  --gpu_type mps \
+  --num_workers 0
+```
+
 
 # Time Series Library (TSLib)
 TSLib is an open-source library for deep learning researchers, especially for deep time series analysis.
