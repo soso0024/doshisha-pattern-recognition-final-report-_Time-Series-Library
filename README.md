@@ -24,7 +24,7 @@ uv run python -u run.py \
   ```
 
 - for Crossformer
-  - change here to `--model Crossformer`
+  - change parameter to `--model Crossformer`
 
 # Time Series Library (TSLib)
 TSLib is an open-source library for deep learning researchers, especially for deep time series analysis.
