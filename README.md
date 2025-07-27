@@ -2,7 +2,7 @@
 Please implement a time series classification method on Heartbeat dataset　(https://www.timeseriesclassification.com/description.php?Dataset=Heartbeat) using TimesNet and Crossformer implemented in the time series library (https://github.com/thuml/Time-Series-Library). So, you will have two results, one by TimesNet and the other by Crossformer.
 
 ## Commands
-- for TimesNet
+- Training command for TimesNet
 ```bash
 uv run python -u run.py \
   --task_name classification \
@@ -23,8 +23,11 @@ uv run python -u run.py \
   --num_workers 0
   ```
 
-- for Crossformer
-  - change parameter to `--model Crossformer`
+- Training command for Crossformer
+  - change the model parameter to `--model Crossformer`
+
+- Test command for both models
+  - change the training parameter to `--is_training 0`
 
 # Time Series Library (TSLib)
 TSLib is an open-source library for deep learning researchers, especially for deep time series analysis.
