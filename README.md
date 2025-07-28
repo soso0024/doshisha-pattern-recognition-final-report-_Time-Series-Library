@@ -18,7 +18,7 @@ uv run python -u run.py \
   --des 'Exp' \
   --itr 1 \
   --batch_size 16 \
-  --train_epochs 3 \
+  --train_epochs 30 \
   --gpu_type mps \
   --num_workers 0
   ```
